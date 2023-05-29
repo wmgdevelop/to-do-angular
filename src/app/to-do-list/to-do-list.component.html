@@ -1,0 +1,41 @@
+<div class="wrapper">
+  <div class="container">
+    <div class="header">To-do List</div>
+    <div class="add-bar">
+      <input class="to-do-description-text-field" type="text" [(ngModel)]="descriptionTextField" />
+      <button class="add-button" (click)="addToDo()">+</button>
+    </div>
+    <div class="to-do-list">
+      <div class="to-do" *ngFor="let toDo of toDoList">
+        <div class="to-do-details">
+          <input class="to-do-done-checkbox" type="checkbox" [(ngModel)]="toDo.done" />
+          <div class="to-do-description">{{toDo.description}}</div>
+        </div>
+        <div class="to-do-actions">
+          <button class="to-do-edit-button">
+            <img class="to-do-edit-svg" src="assets/edit.svg" (click)="editToDo(toDo)" />
+          </button>
+          <button class="to-do-delete-button">
+            <img class="to-do-delete-svg" src="assets/delete.svg" (click)="deleteToDo(toDo)" />
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bar">
+      <div class="progress-bar">
+        <div class="filled-progress-bar" [style.width.%]="calculateProgressPercentage()"></div>
+        <div class="progress-bar-text">{{getProgressBarText()}}</div>
+      </div>
+      <div>
+        <button class="remove-checked-button" (click)="removeAllChecked()">Remove checked</button>
+      </div>
+    </div>
+  </div>
+
+  <app-edit-to-do-dialog *ngIf="isEditToDoDialogOpen" (close)="cancelEditTodo()" (confirm)="confirmEditToDo($event)">
+  </app-edit-to-do-dialog>
+  <app-confirm-delete-to-do-dialog *ngIf="isConfirmDeleteToDoDialogOpen" (close)="cancelDeleteTodo()"
+    (confirm)="confirmDeleteToDo()">
+  </app-confirm-delete-to-do-dialog>
+</div>

@@ -1,0 +1,10 @@
+<div class="dialog-overlay">
+  <div class="dialog-container">
+    <div class="header">Editing To-do</div>
+    <input class="dialog-description" type="text" [(ngModel)]="descriptionTextField" />
+    <div class="dialog-actions">
+      <button class="dialog-close" (click)="onClose()">Close</button>
+      <button class="dialog-confirm" (click)="onConfirm()">Confirm</button>
+    </div>
+  </div>
+</div>

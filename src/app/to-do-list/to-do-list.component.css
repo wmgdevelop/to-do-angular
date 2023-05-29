@@ -1,0 +1,164 @@
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: fixed;
+  background-color: #489cc1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.container {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  background: #fcfcfc;
+  margin: 32px 96px;
+  padding: 16px 32px;
+  max-width: 900px;
+  overflow: auto;
+}
+
+.add-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 4px;
+  height: 36px;
+  margin-bottom: 16px;
+}
+
+.to-do-description-text-field {
+  flex: 1;
+  padding: 8px;
+  text-align: center;
+  font-style: italic;
+  font-weight: bold;
+  color: #247797;
+}
+
+.add-button {
+  cursor: pointer;
+  height: 36px;
+  width: 36px;
+  background-color: #59A3C8;
+  color: #fcfcfc;
+  border: none;
+}
+
+.add-button:hover {
+  background-color: #489cc1;
+}
+
+.to-do-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.to-do {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-top: 2px solid #eceff1;
+  padding: 4px 8px;
+  background-color: #f9fdff;
+  color: #4c9bc5;
+}
+
+.to-do:last-of-type {
+  border-bottom: 2px solid #eceff1;
+}
+
+.to-do:hover {
+  background-color: #f0f9ff;
+}
+
+.to-do-details {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+
+.to-do-done-checkbox {
+  cursor: pointer;
+  height: 16px;
+  width: 16px;
+  margin-top: 3px;
+}
+
+.to-do-description {}
+
+.to-do-actions {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+
+.to-do-actions button {
+  cursor: pointer;
+  height: 24px;
+  width: 24px;
+  border: none;
+  background-color: transparent;
+}
+
+.to-do-actions button:hover img {
+  filter: invert(0.2);
+}
+
+.to-do-actions button:active img {
+  filter: invert(0.4);
+}
+
+.footer-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  bottom: 48px;
+  margin-top: auto;
+}
+
+.progress-bar {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex: 0.5;
+  border: 2px solid #f2f2f2;
+  height: 32px;
+}
+
+.filled-progress-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #fbec49;
+  height: 28px;
+}
+
+.progress-bar-text {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: auto;
+  right: auto;
+  height: 32px;
+  line-height: 32px;
+  text-align: center;
+  color: #5f6c60;
+}
+
+.remove-checked-button {
+  cursor: pointer;
+  background-color: #4a9abf;
+  color: #fcfcfc;
+  height: 32px;
+  padding: 0 32px;
+  border: none;
+}
